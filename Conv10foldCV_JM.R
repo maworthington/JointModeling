@@ -212,7 +212,7 @@ for(i in 1:10) {
            psqinh.risk_conv = 1 - as.numeric(risk.psqinh),
            bl.risk_surv = as.numeric(bl.surv),
            bl.risk_conv = 1 - as.numeric(bl.surv))
-  # I LOV U
+  
   converters = testingDataConv.BL[,c(1,2)]
   predictions_all = merge(converters, preds, by = "NAPLS_ID")
   predictions_all$converters = factor(predictions_all$converters)
