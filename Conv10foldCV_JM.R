@@ -121,16 +121,16 @@ for(i in 1:10) {
     arrange(NAPLS_ID, month)
   
   # fit LME models 
-  P3.lme = lme(P3_SOPS ~ converters*month,
+  P3.lme = lme(P3_SOPS ~ month,
                random = ~ month | NAPLS_ID, data = trainingDataConv,
                control = lmeControl(opt = 'optim'))
-  D1.lme = lme(D1_SOPS ~ converters*month,
+  D1.lme = lme(D1_SOPS ~ month,
                random = ~ month | NAPLS_ID, data = trainingDataConv,
                control = lmeControl(opt = 'optim'))
-  GFSl.lme = lme(GFS_decline ~ converters*month,
+  GFSl.lme = lme(GFS_decline ~ month,
                  random = ~ month | NAPLS_ID, data = trainingDataConv,
                  control = lmeControl(opt = 'optim'))
-  psqinh.lme = lme(psqinh_11 ~ converters*month,
+  psqinh.lme = lme(psqinh_11 ~ month,
                  random = ~ month | NAPLS_ID, data = trainingDataConv,
                  control = lmeControl(opt = 'optim'))
   
